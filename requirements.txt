@@ -21,7 +21,7 @@ packaging==21.3
 Pillow==9.0.1
 proglog==0.1.9
 pyparsing==3.0.7
-pytube==12.0.0
+git+https://github.com/kinshuk-h/pytube.git
 requests==2.27.1
 six==1.16.0
 toml==0.10.2
