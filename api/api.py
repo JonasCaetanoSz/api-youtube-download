@@ -4,7 +4,7 @@ from pytube import YouTube
 from youtube_search import YoutubeSearch
 from converter import converter
 from urllib.parse import quote as format_url
-import tageditor
+from tageditor import MetadataEdit
 import traceback
 import os
 
@@ -13,10 +13,10 @@ upload_folder = "api/src/uploads"
 
 
 class API: 
-
+    
     app = Flask(__name__ , static_url_path="/assets")
-    app.template_folder = "src/web-template"
-    app.static_folder = "src/web-template/assets"
+    app.template_folder = "src/template"
+    app.static_folder = "src/template/assets"
     CORS(app)
     
 
@@ -115,7 +115,7 @@ class API:
 
                             stream.download(output_path=tgt_folder)
                             file = converter.to_mp3(stream,resolution)
-                            tageditor.metadataEditAudio(yt , file)
+                            MetadataEdit.edit(yt , file)
                             download_success = True
                             break;
 

@@ -1,0 +1,180 @@
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ @font-face {
+     font-family:youTube-sans-semibold;
+     src: url(../fonts/YouTubeSansSemibold.otf);
+}
+ * {
+     margin: 0 auto;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Open Sans', sans-serif;
+}
+ body {
+    /*#334f53 */
+     background-color: #1a2b2b;
+}
+ #menu-h{
+     background-color: rgb(37, 37, 39);
+     text-align:center;
+}
+ #menu-h ul {
+     max-width: 800px;
+     list-style: none;
+     padding: 0;
+}
+ #menu-h ul li {
+     display: inline;
+}
+ #menu-h ul li a {
+     color: #FFF;
+     padding: 20px;
+     display: inline-block;
+     text-decoration: none;
+     transition: background .4s;
+}
+ #menu-h ul li a:hover {
+     background-color: rgb(22, 161, 115);
+}
+ .search{
+     text-align: center;
+     margin-top: 40px;
+}
+ .block {
+     margin: 0 auto;
+     max-width: 900px;
+     padding: 50px 30px;
+}
+ .keyword {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     font: 15px/1 'Open Sans', sans-serif;
+     color: #333;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     width: 100%;
+     max-width: 500px;
+     background-color: #ddd;
+     border: none;
+     padding: 10px 11px 11px 11px;
+     border-radius: 3px;
+     box-shadow: none;
+     outline: none;
+     margin: 0;
+     box-sizing: border-box;
+     text-align: center;
+}
+ .thumbnail {
+     position: relative;
+}
+ .thumbnail img {
+     width: 80%;
+     border-radius: 10px;
+}
+ .title{
+     color: #fff;
+     font-family: youTube-sans-semibold;
+     margin: 25px;
+}
+ .title::selection{
+     background-color: #efeac5;
+     color: black;
+}
+ .duration{
+     color: #fff;
+     background : #454545 ;
+     width:60px;
+     position: relative;
+     margin-top: -23px;
+     left: 32%;
+     font-family: Arial;
+}
+ .duration::selection{
+     background-color: #688a7c;
+     color: #fff;
+}
+ .loading{
+     margin-top: -10px;
+}
+ .loading img {
+     width:70px;
+     height: 60px;
+}
+ .loading p {
+     color: #fff;
+}
+ .ir {
+     background-color: yellow;
+     margin-top: 20px;
+     width: 35%;
+     height: 30px;
+     font-family: Arial;
+     background-color: #a3606d;
+     color: #fff;
+     border-radius: 5px;
+}
+ .ir:hover{
+     background-color: #4f2d4b;
+}
+/* atualizacao*/
+ .download-preview{
+     text-align: center;
+     margin-top: -80px;
+}
+ .info{
+     color: #fff;
+     font-size: 20px;
+}
+ .opcoes button{
+     height: 50px;
+     width: 120px;
+}
+ .opcoes {
+     text-align: center;
+     margin-top: 20px;
+}
+ hr {
+     margin-top:14px;
+}
+ .res {
+     width: 40%;
+     height: 38px;
+     margin-bottom: 100px;
+     outline:none;
+     font-family: Arial;
+     text-align: center;
+}
+ .down {
+     height: 38px !important;
+     background-color: red;
+     margin: 13px;
+     background-color: #66af91;
+     color: black;
+     font-family: Arial;
+     border: 2px;
+}
+ .download-sucess h1 {
+     font-size: 18px;
+     color: #fff;
+}
+ .download-sucess div {
+     margin-top:16px;
+}
+ .download-sucess div a {
+     width: 160px;
+     height: 40px;
+     line-height: 40px;
+     padding: 10px 5px;
+     margin: 20px;
+     background-color: #000;
+     color: #FFF;
+     border-radius: 5px;
+     text-decoration: none;
+     text-align: center;
+     font-weight: bold;
+     font-family: Arial;
+}
+/* testar o site sem o botao peswuisar*/
+ .ir {
+     display: none;
+}
