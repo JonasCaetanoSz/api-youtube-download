@@ -18,7 +18,7 @@ com seu token de acesso em mãos você deve criar uma <a href="https://pt.stacko
 
 #### a chave deve ser : CLIENT_ACCESS_TOKEN é receber como valor seu token de acesso obtido no genius. 
 
-se preferir você não precisar usar a API do genius basta fazer essa varivavel receber um valor aleatorio para não quebrar o codigo porém, os metadados da musica serão pegos diretamente do youtube é a capa do album ou single estará em qualidade inferior.
+você não precisar usar a API do genius basta fazer essa variavel receber um valor aleatorio para não quebrar o codigo porém, os metadados da musica serão pegos diretamente do youtube é a capa do album ou single estará em qualidade inferior.
 
 
 
