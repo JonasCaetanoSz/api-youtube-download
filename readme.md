@@ -1,8 +1,3 @@
-# ⚠️ aviso :
-
-Este é um projeto criado apenas para estudo, portanto não me responsabilizo por nenhum uso indevido ou ato que seja contra os <a href="https://www.youtube.com/static?gl=BR&template=terms&hl=pt" target="_blank"> termos de serviço do Youtube</a>.
-
-
 
 # :rocket: iniciando : 
 
@@ -13,6 +8,19 @@ Este é um projeto criado apenas para estudo, portanto não me responsabilizo po
 ### satisfazendo os requisitos :
 
     cd api-youtube-download && pip3 install -r requirements.txt
+
+
+### variveis de ambiente (opcional):
+
+para coletar a imagem do album, nome do artista é nome do album foi utilizado a API do <a href="https://genius.com">genius</a>,
+para usar ela é preciso ter um token de acesso que você pode obter cadastrando como desenvolvedor em <a href="https://genius.com/api-clients">genius API clients </a> é gratuito e rapido de fazer.
+com seu token de acesso em mãos você deve criar uma <a href="https://pt.stackoverflow.com/questions/339476/o-que-s%C3%A3o-vari%C3%A1veis-de-ambiente">variavel de ambiente</a>:
+
+#### a chave deve ser : CLIENT_ACCESS_TOKEN é receber como valor seu token de acesso obtido no genius. 
+
+se preferir você não precisar usar a API do genius basta fazer essa varivavel receber um valor aleatorio para não quebrar o codigo porém, os metadados da musica serão pegos diretamente do youtube é a capa do album ou single estará em qualidade inferior.
+
+
 
 ### iniciando a aplicação:
 
@@ -86,3 +94,9 @@ Baixar o vídeo :
 #### retorna o link para download do arquivo:
 
 ![download](https://user-images.githubusercontent.com/87551778/154806129-99f50fd4-2639-46a4-b7a0-c2e1cf483682.PNG)
+
+
+# ⚠️ aviso :
+
+Este é um projeto criado apenas para estudo, portanto não me responsabilizo por nenhum uso indevido ou ato que seja contra os <a href="https://www.youtube.com/static?gl=BR&template=terms&hl=pt" target="_blank"> termos de serviço do Youtube</a>.
+
