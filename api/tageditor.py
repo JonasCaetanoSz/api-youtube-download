@@ -16,8 +16,6 @@ upload_folder = 'api/src/uploads/'
 
 def deEmojify(text):
 
-""" remover emoji ou simbolos ocultos do nome da musica."""
-
     regrex_pattern = re.compile(pattern = "["
         u"\U0001F600-\U0001F64F" 
         u"\U0001F300-\U0001F5FF" 
