@@ -1,4 +1,4 @@
-const baseurl = window.location.host //'https://apiydownload.herokuapp.com'
+const baseurl = '' //window.location.host //'https://apiydownload.herokuapp.com'
 const loading = document.querySelector('.loading')
 
 function recomendados(){
