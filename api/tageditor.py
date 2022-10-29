@@ -9,8 +9,11 @@ import time
 import json
 from urllib.parse import quote
 
-
-CLIENT_ACCESS_TOKEN = os.environ['CLIENT_ACCESS_TOKEN']
+# tente pegar o token de acesso á API do genius
+try: CLIENT_ACCESS_TOKEN = os.environ['CLIENT_ACCESS_TOKEN']
+# variavel não declarada, criar exeção para evitar erro
+except: CLIENT_ACCESS_TOKEN = ''
+	
 upload_folder = 'api/src/uploads/'
 
 
