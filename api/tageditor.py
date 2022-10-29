@@ -9,12 +9,10 @@ import time
 import json
 from urllib.parse import quote
 
-# tente pegar o token de acesso á API do genius
 try: CLIENT_ACCESS_TOKEN = os.environ['CLIENT_ACCESS_TOKEN']
-# variavel não declarada, criar exeção para evitar erro
-except: CLIENT_ACCESS_TOKEN = ''
-	
+except: CLIENT_ACCESS_TOKEN  = ''
 upload_folder = 'api/src/uploads/'
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36'}
 
 
 def deEmojify(text):
@@ -55,7 +53,7 @@ class MetadataEdit:
 			"artist":"",
 			"album_cover":""}
 
-			response = requests.get(f"https://api.genius.com/search?q={quote(song)}&access_token={CLIENT_ACCESS_TOKEN}")
+			response = requests.get(f"https://api.genius.com/search?q={quote(song)}&access_token={CLIENT_ACCESS_TOKEN}", headers=headers)
 
 			if response.status_code == 200:
 
@@ -84,7 +82,7 @@ class MetadataEdit:
 
 								audiofile.initTag()
 
-							audiofile.tag.images.set(ImageFrame.FRONT_COVER ,requests.get(music['album_cover']).content , 'image/jpeg')
+							audiofile.tag.images.set(ImageFrame.FRONT_COVER ,requests.get(music['album_cover'] , headers=headers ).content , 'image/jpeg')
 							audiofile.tag.title = u'{}'.format(music['song'])
 							audiofile.tag.album = u'{}'.format(music['album'])
 							audiofile.tag.artist = u'{}'.format(music['artist'])
@@ -109,7 +107,7 @@ class MetadataEdit:
 
 		def bypytube(yt,file):
 
-			uncut_cover = Image.open(io.BytesIO(requests.get(yt.thumbnail_url).content))
+			uncut_cover = Image.open(io.BytesIO(requests.get(yt.thumbnail_url , headers=headers).content))
 			output_cut_cover = io.BytesIO()
 			cut_cover = uncut_cover.crop((0, 60, 510, 420))
 			cut_cover.save(output_cut_cover, format='JPEG')
